@@ -123,7 +123,7 @@ void freeLL(Linkedlist* list)
 		prev = curr;
 		curr = curr->next;
 	}
-	free(curr);
+	free(prev);
 	
 	list->size = 0;
 }
