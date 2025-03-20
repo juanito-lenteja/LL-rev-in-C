@@ -3,6 +3,8 @@
 #include <string.h>
 #include "LL.h"
 
+#define SIZE 705032704
+
 void printLL(Linkedlist list);
 void reverseLL(Linkedlist* list);
 void makeNodeList(Linkedlist* list, int size);
@@ -11,27 +13,14 @@ void freeLL(Linkedlist* list);
 
 int main(void)
 {
-	/*
-	Node n1;
-	Node n2;
-	Node n3;
-	Node n4;
-	memset(&n1, 0, sizeof(Node));
-	memset(&n2, 0, sizeof(Node));
-	memset(&n3, 0, sizeof(Node));
-	memset(&n4, 0, sizeof(Node));*/
-	
-	/* link nodes */
-	/* Node* narr[] = {&n1, &n2, &n3, &n4};
-	initnodes(narr, sizeof(narr) / sizeof(Node *)); */
-	
 	Linkedlist list;
 	memset(&list, 0, sizeof(Linkedlist));
-	makeNodeList(&list, 5);
+	printf("%d bytes used", SIZE);
+	makeNodeList(&list, SIZE);
 
-	printLL(list);
+//	printLL(list);
 	reverseLL(&list);
-	printLL(list);
+//	printLL(list);
 	
 	freeLL(&list);
 	
